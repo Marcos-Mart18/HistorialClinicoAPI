@@ -43,4 +43,10 @@ public class MedicoServiceImpl implements MedicoService{
 		return medicoDao.readAll();
 	}
 
+	@Override
+	public List<Medico> searchMedico(String filtro) {
+		// TODO Auto-generated method stub
+		return medicoDao.searchMedico(filtro);
+	}
+
 }

@@ -11,5 +11,6 @@ public interface MedicoService {
 	Medico update(Medico m);
 	void delete(Long id);
 	Medico read(Long id);
+	List<Medico>searchMedico(String filtro);
 	List<Medico>readAll();
 }

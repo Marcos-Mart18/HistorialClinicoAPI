@@ -11,7 +11,7 @@ import upeu.edu.pe.HistoriaClinica.HistoriaClinica.Entity.Medico;
 @Repository
 public interface MedicoRepository extends JpaRepository<Medico, Long>{
 	@Query(
-		    value = "SELECT * FROM tbl_medicos WHERE tbl_medicos.nombres LIKE ('%', :filtro, '%')",
+		    value = "SELECT * FROM tbl_medicos WHERE tbl_medicos.nombres LIKE CONCAT ('%', :filtro, '%')",
 		    nativeQuery = true
 		)
 		List<Medico> searchNative(@Param("filtro") String filtro);

@@ -43,4 +43,10 @@ public class MedicoDaoImpl implements MedicoDao{
 		return medicoRepository.findAll();
 	}
 
+	@Override
+	public List<Medico> searchMedico(String filtro) {
+		// TODO Auto-generated method stub
+		return medicoRepository.searchNative(filtro);
+	}
+
 }
